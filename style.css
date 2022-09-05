@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgb(24, 67, 141);
+     color: rgb(4, 255, 242);
+    height: 43px;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    padding: 0px 13px;
+    font-family: 'Inconsolata', monospace;
+}
+nav ul{
+    list-style-type: none;
+}
+.gamecontiner
+{
+    display: flex;
+    justify-content: center;    
+    margin-top: 100px;
+}
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Inconsolata', monospace;
+
+}
+.box{
+
+    border: 2px solid black;
+    font-size: 10vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    color: rgb(4, 255, 242);
+}
+.box:hover{
+    background-color: rgb(57, 87, 236);
+}
+.br-0
+{
+    border-right: 0;
+}
+.bl-0
+{
+    border-left: 0;
+
+}
+.bt-0
+{
+    border-top: 0;
+}
+.bb-0
+{
+    border-bottom: 0;
+}
+#reset
+{
+    margin: 20px 50px;
+    padding: 14px;
+    background-color: rgb(24, 128, 219);
+    border-radius: 10px;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+
+}
+#reset:hover{
+    background-color: rgb(108, 178, 239);
+    cursor: pointer;
+}
+.info{
+    font-size: 27px;
+}
