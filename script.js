@@ -58,4 +58,4 @@ gaemover=false
 setTimeout(()=>{
     bgmusic.play()
     
-})
+},1000)
