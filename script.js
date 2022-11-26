@@ -26,7 +26,6 @@ const checkwin = () =>
 }
 
 //main
-bgmusic.play()
 let boxes=document.getElementsByClassName("box");
 Array.from(boxes).forEach(element=>{
     let boxtext=element.querySelector('.boxtext');
@@ -54,4 +53,9 @@ reset.addEventListener('click',()=>{
     turn="X";
 gaemover=false
  document.getElementsByClassName("info")[0].innerText="Turn for " + turn;
+})
+
+setTimeout(()=>{
+    bgmusic.play()
+    
 })
