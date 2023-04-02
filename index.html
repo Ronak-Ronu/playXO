@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tic tac toe</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
+   
   </head>
   <body>
     <nav id="nav-bar">
@@ -36,6 +34,31 @@
         </div>
       </div>
 </div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
       <script src="script.js"></script>
+    <script>
+      Draggable.create(["#nav-bar", "#reset","#grid"], {
+    bounds: document.getElementsByTagName("body"),
+  });
+  gsap.to("#element", {
+    duration:3,
+    text: {
+        value: "wecome to Play XO ..",
+      delimiter: "",
+    },
+  });
+  gsap.from("#info", {
+    duration: 2,
+    delimiter: "",
+      text:""
+  });
+  
+    </script>
   </body>
 </html>

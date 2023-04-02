@@ -1,3 +1,4 @@
+
 console.log("welcome to Play XO")
 let music = new Audio("music1.ogg")
 let audioturn = new Audio("music1.ogg")
@@ -24,7 +25,7 @@ const checkwin = () =>
     })
 }
 
-//main
+
 let boxes=document.getElementsByClassName("box");
 Array.from(boxes).forEach(element=>{
     let boxtext=element.querySelector('.boxtext');
@@ -56,21 +57,5 @@ gaemover=false
 
 setTimeout(()=>{
     bgmusic.play()
-    
-},1000)
 
-Draggable.create(["#nav-bar", "#reset","#grid"], {
-    bounds: document.getElementsByTagName("body"),
-  });
-  gsap.to("#element", {
-    duration:3,
-    text: {
-        value: "wecome to Play XO ..",
-      delimiter: "",
-    },
-  });
-  gsap.from("#info", {
-    duration: 2,
-    delimiter: "",
-      text:""
-  });
+},100)
