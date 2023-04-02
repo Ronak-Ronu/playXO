@@ -9,7 +9,6 @@ const changeTurn =()=>{
     return turn==="X"?"O":"X"
 }
 
-//chck wi
 const checkwin = () =>
 {
     let boxtext=document.getElementsByClassName('boxtext');
