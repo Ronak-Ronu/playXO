@@ -58,3 +58,19 @@ setTimeout(()=>{
     bgmusic.play()
     
 },1000)
+
+Draggable.create(["#nav-bar", "#reset","#grid"], {
+    bounds: document.getElementsByTagName("body"),
+  });
+  gsap.to("#element", {
+    duration:3,
+    text: {
+        value: "wecome to Play XO ..",
+      delimiter: "",
+    },
+  });
+  gsap.from("#info", {
+    duration: 2,
+    delimiter: "",
+      text:""
+  });
