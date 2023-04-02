@@ -9,14 +9,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
-    <script defer src="script.js"></script>
-
   </head>
   <body>
     <nav id="nav-bar">
         <ul>
             <li id="play-xo">Play XO</li>
-        </ul>
+          </ul>
     </nav>
     <div class="gamecontiner">
       <div id="grid" class="container">
@@ -36,7 +34,7 @@
           <span id="info" class="info">Turn for X</span>
           <button id="reset">Reset</button>
         </div>
-    </div>
+      </div>
 </div>
     <script>
       Draggable.create(["#nav-bar", "#reset","#grid"], {
@@ -55,5 +53,6 @@
           text:""
       });
       </script>
+  <script defer src="script.js"></script>
   </body>
 </html>
