@@ -1,7 +1,5 @@
-
 console.log("welcome to Play XO")
 let music = new Audio("music1.ogg")
-let audioturn = new Audio("music1.ogg")
 let juke_music = document.getElementById("juke-music");
 let my_svg= document.getElementById("juke-box");
 let isPlaying = false;
@@ -9,6 +7,8 @@ let isPlaying = false;
 
 let turn ="X"
 let gaemover=false;
+
+
 const changeTurn =()=>{
     return turn==="X"?"O":"X"
 }
@@ -30,6 +30,7 @@ const checkwin = () =>
 
 
 let boxes=document.getElementsByClassName("box");
+
 Array.from(boxes).forEach(element=>{
     let boxtext=element.querySelector('.boxtext');
     element.addEventListener('click',()=>{
@@ -37,7 +38,7 @@ Array.from(boxes).forEach(element=>{
         {
             boxtext.innerText=turn;
             turn=changeTurn();
-            audioturn.play();
+            music.play();
             checkwin();
             if(!gaemover){
 
@@ -56,11 +57,11 @@ reset.addEventListener('click',()=>{
     turn="X";
 gaemover=false
  document.getElementsByClassName("info")[0].innerText="Turn for " + turn;
-})
+});
 
 
 
-Draggable.create(["#nav-bar", "#reset","#grid","#juke-box"], {
+Draggable.create(["#nav-bar", "#reset","#grid"], {
     bounds: document.getElementsByTagName("body"),
   });
 
