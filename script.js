@@ -2,7 +2,10 @@
 console.log("welcome to Play XO")
 let music = new Audio("music1.ogg")
 let audioturn = new Audio("music1.ogg")
-let bgmusic= new Audio("music2.mp3")
+let juke_music = document.getElementById("juke-music");
+let my_svg= document.getElementById("juke-box");
+let isPlaying = false;
+
 
 let turn ="X"
 let gaemover=false;
@@ -55,16 +58,13 @@ gaemover=false
  document.getElementsByClassName("info")[0].innerText="Turn for " + turn;
 })
 
-setTimeout(()=>{
-    bgmusic.play()
-
-},100);
 
 
-Draggable.create(["#nav-bar", "#reset","#grid"], {
+Draggable.create(["#nav-bar", "#reset","#grid","#juke-box"], {
     bounds: document.getElementsByTagName("body"),
   });
-  gsap.to("#element", {
+
+gsap.to("#element", {
     duration:3,
     text: {
         value: "wecome to Play XO ..",
@@ -76,3 +76,17 @@ Draggable.create(["#nav-bar", "#reset","#grid"], {
     delimiter: "",
     text:""
   });
+
+
+Draggable.create(".juke #juke-box", 
+    {type: "rotation", 
+    inertia: true,
+    onDrag: function() {
+    juke_music.play();
+    },
+    onDragEnd: function() {
+       juke_music.pause();
+      }
+      
+    
+});

@@ -7,9 +7,21 @@
 body{
     height: 100vh;
 }
+
+.juke #juke-box{
+    height: 400px;width: 400px;
+    position: absolute;
+    bottom: 100px;
+    right: 10px;
+}
+.juke #juke-box:hover{
+    width: 410px;
+    height: 410px;
+    transition: 0.3s;
+}
 nav{
     background-color: rgb(24, 67, 141);
-     color: rgb(4, 255, 242);
+    color: rgb(4, 255, 242);
     height: 43px;
     width: 100vw;
     font-size: 23px;
@@ -33,7 +45,6 @@ nav ul{
     grid-template-columns: repeat(3,10vw);
     grid-template-rows: repeat(3,10vw);
     font-family: 'Inconsolata', monospace;
-
 }
 .box{
 
@@ -82,3 +93,18 @@ nav ul{
 .info{
     font-size: 27px;
 }
+
+
+@media only screen and (max-width:600px) {
+    .juke #juke-box{
+         width: 250px;
+         height: 250px;
+         position: absolute;
+         left: 120px;
+         bottom: -40px;
+     }
+     .gameinfo{
+        font-size: 10px;
+     }
+     
+ }
